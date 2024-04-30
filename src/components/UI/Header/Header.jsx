@@ -29,7 +29,6 @@ const nav_links = [
 
 const Header = () => {
   const [cartContainer, setCartContainer] = useState(false);
-  // const [modalActive, setModalActive] = useState(false) ist für login zuständig
   const [fixNav, setFixNav] =useState(false)
   const menuRef = useRef(null);
   const openCart = () => {
