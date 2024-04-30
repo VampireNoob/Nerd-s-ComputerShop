@@ -104,7 +104,6 @@ const Footer = () => {
                             <p className="footer-listItem">Google Maps</p >
                         </div>
                     </div>
-                {/* <img className="payment" src="https://i.ibb.co/Qfvn4z6/payment.png" alt="payment" /> */}
                 </div>
             </div>
         </div>
