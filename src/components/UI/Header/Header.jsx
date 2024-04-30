@@ -6,11 +6,6 @@ import { MdOutlineShoppingBag, MdMenu, MdClose } from "react-icons/md";
 import { useSelector } from 'react-redux';
 import { getTotalArticles } from '../../../redux/cartSlice';
 import Cart from '../../Cart/Cart'
-// import StripeContainer from '../../../Stripe/StripeContainer'
-// import Login from '../../../Auth/Login';
-// import Logout from '../../../Auth/Logout';
-// import Account from '../../../Auth/Account';
-// import userImg from './userImg.png'
 
 
 const nav_links = [
@@ -90,25 +85,9 @@ return (
 
           <hr className='horz' />
           <Cart/>
-          {/* {totalItems === 0 ? '' : <StripeContainer/>} */}
+        
         </div>
 
-          {/* <motion.div whileHover={{scale: 1.2}} className='login-icon' 
-          onClick={() => setModalActive(true)}>
-            <MdPersonOutline />
-          </motion.div>  */}
-          {/* <div onClick={() => setModalActive(false)}
-            className={modalActive ? 'modal activated' : 'modal'}>
-              <div onClick={(e) => e.stopPropagation()}
-                className={modalActive ? 'modal_content activated' : 'modal_content'}>
-                  <div className='box-auth'>
-                      <img  className="userImg" src={userImg}  alt=""/>
-                      <Login/>
-                    </div> 
-              </div>
-          </div> */}
-              {/* <Account/> */}
-              {/* <Logout/> */}
         <div className='mobile-menu' onClick={menuToggle}>
           <motion.span whileHover={{scale: 1.2}} >
             <MdMenu />
