@@ -12,25 +12,3 @@ body {
   margin: 0;
   background: #191919;
 }
-
-/* .pay-form {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 20px;
-  margin-top: auto;
-}
-.pay-btn {
-  width: 350px;
-height: 40px;
-margin-top: 30px;
-border-radius: 10px;
-background-color: teal;
-border: none;
-color: white;
-font-size: 17px;
-cursor: pointer;
-}
-.pay-btn:hover {
-  background-color: rgb(9, 158, 158);
-} */
