@@ -1,0 +1,17 @@
+.icon-cart {
+  display: flex;
+  flex-direction: column;
+}
+
+.btn-cart-box {
+  align-self: center;
+  border: 1px solid #e26600;
+  border-radius: 5px;
+  background-color: #0b3a3e;
+  color: #f6f6f6;
+  font-family: "Rowdies", sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  padding: 18px 30px;
+  cursor: pointer;
+}

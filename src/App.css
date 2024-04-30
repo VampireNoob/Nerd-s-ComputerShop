@@ -1,38 +1,36 @@
-.App {
-  text-align: center;
+::-webkit-scrollbar {
+  background: #0b3a3e;
+  width: 10px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+::-webkit-scrollbar-thumb {
+  background: #e26600;
+  border-radius: 10px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+body {
+  margin: 0;
+  background: #191919;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/* .pay-form {
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+  padding: 20px;
+  margin-top: auto;
 }
-
-.App-link {
-  color: #61dafb;
+.pay-btn {
+  width: 350px;
+height: 40px;
+margin-top: 30px;
+border-radius: 10px;
+background-color: teal;
+border: none;
+color: white;
+font-size: 17px;
+cursor: pointer;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
+.pay-btn:hover {
+  background-color: rgb(9, 158, 158);
+} */

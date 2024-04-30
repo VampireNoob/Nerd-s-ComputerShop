@@ -1,0 +1,43 @@
+.filters {
+    position: relative;
+    overflow: hidden;
+}
+
+.cat {
+    font-family: "Rowdies", sans-serif;
+    color: #bababa;
+}
+
+.categorySelected {
+    font-family: "Rowdies", sans-serif;
+    font-weight: bold;
+    color: #e28301;
+}
+
+.categoryButton {
+    margin-bottom: 5px;
+    cursor: pointer;
+    font-size: 23px;
+}
+
+.categoryButton:hover {
+    color: #e28301;
+}
+
+
+@media all and (max-width: 540px) {
+    .cat {
+        width: 300px;
+        display: flex;
+        margin-left: 60px;
+        flex-wrap: wrap;
+        padding: 10px;
+    }
+    .filters {
+        margin: 5px;
+        padding: 5px;
+    }
+    .categoryButton {
+        margin: 0;
+    }
+}

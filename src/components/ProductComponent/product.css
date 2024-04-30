@@ -1,0 +1,293 @@
+.products {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.single-product-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+  margin: 10px ;
+  width: 300px;
+  height: 350px;
+  border-radius: 5px;
+  background: #0b3a3e;
+  position: relative;
+}
+
+/* der innere rechteck */
+.quader {
+  width: 230px;
+  height: 290px;
+  border: 2px solid #e26600;
+  border-radius: 5px;
+  padding: 0px 10px; 
+  background: #191919;
+  position: absolute;
+}
+
+/* ist für die bilder auf der shopseite zuständig */
+.product-img {
+  width: 80%;
+  height: 65%;
+  z-index: 2;
+  object-fit: cover;
+}
+
+.product-info {
+  font-family: "Rowdies", sans-serif;
+  font-size: 23px;
+  opacity: 0;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background: rgba(0, 0, 0, 0.9);
+  z-index: 3;
+  display: flex;
+  color: #f6f6f6;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  transition: 0.4s ease-in-out;
+  border: 1px solid #e26600;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.product-info:hover {
+  opacity: 1;
+}
+
+.product-details {
+  margin-left: 15px;
+  margin-bottom: 15px;
+  display: flex;
+  flex-direction: column;
+}
+
+.product-details p {
+  font-weight: 600;
+  padding: 1px;
+  margin: 0;
+}
+
+.icon {
+  width: 35px;
+  height: 35px;
+  border: none;
+  color: #0b3a3e;
+  margin: 16px;
+  transition: all 0.5s ease;
+  cursor: pointer;
+}
+
+.icon:hover {
+  transform: scale(1.6);
+  transition: all 0.5s ease;
+}
+
+.iconBox {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Produktdetails seite */
+.product-container {
+  padding: 20px 50px;
+  margin-top: 20px;
+  display: flex;
+  height: 80vh;
+}
+
+.left {
+  flex: 1;
+  display: flex;
+  gap: 20px;
+}
+
+/* bilder bei der produktbeschreibung */
+.img-container {
+  display: flex;
+  justify-content: center;
+}
+
+.prod-img {
+  width: 600px;
+  height: 500px;
+  overflow: hidden;
+}
+
+.right {
+  background: rgba(246,246,246,0.1);
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  border-radius: 5px;
+  padding: 0px 40px;
+  gap: 20px;
+}
+
+.product-title {
+  font-family: "Rowdies", sans-serif;
+  letter-spacing: 1px;
+  color: #e26600;
+}
+
+.product-price{
+  font-family: "Rowdies", sans-serif;
+  font-size: 25px;
+  color: #e28301;
+}
+
+.product-desc {
+  font-family: "Ojuju", sans-serif;
+  font-size: 17px;
+  letter-spacing: 1px;
+  color: #f6f6f6;
+}
+
+.detail{
+  list-style: square;
+  color: #e28301;
+}
+
+.detail span {
+  color: #f6f6f6;
+}
+
+.add-cart-btn {
+  width: 220px;
+  background: #0b3a3e;
+  color: #f6f6f6;
+  font-family: "Rowdies", sans-serif;
+  font-size: 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  border: 1px solid #e26600;
+  border-radius: 5px;
+  margin-top: 30px;
+}
+
+/* ist für die knöpfe zuständig bei ändern der zahl */
+.btn-change {
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  border: none;
+}
+
+.change-container {
+  display: flex;
+  margin-bottom: 20px;
+}
+
+.quantity {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn-back {
+  border: none;
+  width: 30%;
+  margin-top: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  background: transparent;
+  font-family: "Rowdies", sans-serif;
+  font-size: 12px;
+  cursor: pointer;
+  color: #e26600;
+}
+
+
+@media all and (max-width: 1520px) {
+  .product-container {
+    flex-direction: column;
+    height: 100dvh;
+  }
+  .img-container {
+    width: 500px;
+    height: 200px;
+  }
+  .product-title {
+    font-size: 20px;
+  }
+  .product-price {
+    font-size: 18px;
+  }
+  .product-desc, .detail {
+    font-size: 15px;
+  }
+  .add-cart-btn {
+    width: 150px;
+    font-size: 12px;
+  }
+}
+
+@media all and (max-width: 1030px) {
+  .product-container {
+    height: 100dvh;
+  }
+}
+
+@media all and (max-width: 760px) {
+  .img-container {
+    width: 400px;
+  }
+  .prod-img {
+    object-fit: cover;
+    width: 400px;
+    height: 300px;
+  }
+}
+
+@media all and (max-width: 500px) {
+  .product-container {
+    padding: 20px;
+    flex-direction: column;
+  }
+  .img-container{
+    height: 300px;
+  }
+  .prod-img {
+    width: 300px;
+    height: 300px;
+  }
+  .product-title {
+    font-size: 20px;
+  }
+  .product-price {
+    font-size: 18px;
+  }
+  .product-desc, .detail {
+    font-size: 15px;
+  }
+  .add-cart-btn { 
+    width: 100%;
+  }
+}
+
+@media all and (max-width: 400px) {
+  .img-container{
+    height: 230px;
+  }
+  .product-title {
+    font-size: 15px;
+  }
+  .product-price {
+    font-size: 13px;
+  }
+  .product-desc, .detail {
+    font-size: 13px;
+  }
+}

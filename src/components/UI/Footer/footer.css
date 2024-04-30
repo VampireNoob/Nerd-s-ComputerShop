@@ -1,0 +1,149 @@
+.footer-container {
+  display: flex;
+  background: #0b3a3e;
+  border-top: 2px solid #e26600;
+  border-radius: 60px 60px 0px 0px;
+  }
+
+.footer-left, .footer-center, .footer-right {
+  flex: 1;
+  padding: 15px;
+}
+
+.footer-left {
+  display: flex;
+  flex-direction: column;
+}
+
+.footer-left-title {
+  font-family: "Rowdies", sans-serif;
+  font-size: 40px;
+  margin-top: 15px;
+  color: #e26600;
+}
+
+.social-container {
+  display: flex;
+}
+
+.social-icon {
+  margin: 45px 10px 10px 10px;
+  font-size: 27px;
+  color: #f6f6f6;
+}
+
+.footer-desc {
+  font-family: "Ojuju", sans-serif;
+  font-size: 15px;
+  margin: 15px 0px;
+}
+
+.footer-title {
+  margin: 30px 60px 15px;
+  font-family: "Rowdies", sans-serif;
+  font-size: 20px;
+  color: #e26600;
+}
+
+.footer-titleContact {
+  margin: 30px 0px 15px;
+  font-family: "Rowdies", sans-serif;
+  font-size: 20px;
+  color: #e26600;
+}
+
+.footer-links {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  overflow: hidden;
+}
+
+.ft-linkItem {
+  font-family: "Ojuju", sans-serif;
+  color: #f6f6f6;
+  margin: 1px 60px;
+}
+
+.ft-link {
+  text-decoration: none;
+  position: relative;
+}
+
+.symbol {
+  cursor: pointer;
+  color: #e28301;
+}
+
+.symbol:hover {
+  color: #f6f6f6;
+}
+
+.footer-listItem {
+  font-family: "Ojuju", sans-serif;
+  color: #f6f6f6;
+  margin: 1px;
+}
+.ft-contact {
+  display: flex;
+  align-items: center;
+}
+.ft-contact span {
+  padding: 5px;
+}
+
+
+@media all and  (max-width: 1170px) {
+  .footer-left-title {
+    font-size: 23px;
+  }
+  .social-icon {
+    font-size: 12px;
+  }
+  .footer-desc {
+    font-size: 7px;
+  }
+  .footer-title, .footer-titleContact {
+    font-size: 18px;
+  }
+  .ft-linkItem, .footer-listItem {
+    font-size: 12px;
+  }
+}
+
+@media all and  (max-width: 950px) {
+  .footer-left, .footer-center, .footer-right {
+    padding: 7px;
+  }
+}
+
+@media all and  (max-width: 885px) {
+  .footer-container {
+    flex-direction: column;
+  }
+  .footer-left-title, .footer-desc {
+    margin: 5px;
+    text-align: center;
+  }
+  .social-container, .ft-contact {
+    justify-content: center;
+  }
+  .footer-left, .footer-center, .footer-right {
+    text-align: center;
+  }
+  .footer-left-title {
+    font-size: 30px;
+  }
+  .social-icon {
+    font-size: 20px;
+  }
+  .footer-desc {
+    font-size: 10px;
+  }
+  .footer-title, .footer-titleContact {
+    font-size: 18px;
+  }
+  .ft-linkItem, .footer-listItem {
+    font-size: 15px;
+  }
+}

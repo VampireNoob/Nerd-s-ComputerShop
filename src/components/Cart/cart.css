@@ -1,0 +1,117 @@
+.container-cart {
+  max-height: 500px;
+  overflow-y: auto;
+  flex-wrap: nowrap;
+}
+
+.cartItem-container {
+  margin: 10px 10px 45px 10px;
+  padding: 25px;
+  background: #f6f6f6;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 5px;
+  border: 1px solid #0b3a3e;
+}
+
+.left {
+  display: flex;
+  justify-content: flex-start;
+  flex: 1;
+}
+
+.cartItem-img {
+  width: 100px;
+  height: 70px;
+}
+
+.box1-cartItem {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  flex: 1;
+}
+
+.box2-cartItem {
+  font-family: "Ojuju", sans-serif;
+  font-weight: bold;
+  display: flex;
+  justify-content: flex-start;
+  font-size: 14px;
+  margin-top: 10px;
+  width: 290px;
+  }
+
+.cartItem-title {
+  font-family: "Rowdies", sans-serif;
+  font-size: 20px;
+  padding: 0px;
+  margin: 0px;
+}
+
+.cartItem-quantity-price {
+  font-size: 17px; 
+  padding: 0px;
+  margin: 0px;
+  color: #5b5b59;
+}
+
+.cartItem-price {
+  margin-left: 25px;
+}
+
+.right {
+  display: flex;
+  justify-content: flex-start;
+  flex: 1;
+  font-size: 20px;
+}
+
+.right span {
+  width: 8%;
+}
+
+.trash {
+  color: #0b3a3e;
+  margin-left: 85px;
+}
+
+.totalPrice {
+  font-family: "Ojuju", sans-serif;
+  font-size: 28px;
+  color: #f6f6f6;
+  text-align: center;
+}
+
+.change-container, .btn-change {
+  font-family: "Rowdies", sans-serif;
+  width: 50%;
+  color: #f6f6f6;
+}
+
+.quantity {
+  font-size: 15px;
+}
+
+.btn-change {
+  background: #0b3a3e;
+  border-radius: 5px;
+}
+
+
+@media all and (max-width: 800px) {
+  .cartItem-container {
+    flex-direction: column;
+  }
+  .trash {
+    margin-left: 0;
+    margin-top: 10px;
+  }
+}
+
+@media all and (max-width: 500px) {
+  .cartItem-title {
+    font-size: 15px;
+  }
+}

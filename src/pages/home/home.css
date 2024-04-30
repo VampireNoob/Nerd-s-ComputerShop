@@ -1,0 +1,26 @@
+.team-title {
+  font-family: "Rowdies", sans-serif;
+  font-size: 35px;
+  color: #e26600;
+  text-align: center;
+  margin-top: 180px; 
+  margin-bottom: 30px;
+  }
+
+.team-text{
+  font-family: "Ojuju", sans-serif;
+  font-size: 19px;
+  letter-spacing: 0.1rem;
+  margin-bottom: 60px;
+  line-height: 35px;
+  text-align: center;
+  color: #f6f6f6;
+}
+
+
+@media all and  (max-width: 500px) {
+  .img-mobile {
+    width: 100%;
+    height: auto;
+  }
+}

@@ -1,0 +1,160 @@
+.contactBox {
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+}
+
+.contactHead {
+    display: flex;
+    justify-content: space-around;
+    border-radius: 5px;
+    margin-top: 100px;
+    padding: 0px 30px 0px 0px;
+    background: rgba(246,246,246,0.1);
+    align-item: center;
+    height: 70vh;
+    width: 65vw;
+}
+
+.bg-contact {
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 800px;
+}
+
+.bg-contact h1 {
+    font-family: "Rowdies", sans-serif;
+    font-size: 37px;
+    color: #e26600;
+    margin: 0;
+}
+.bg-contact p {
+    font-family: "Ojuju", sans-serif;
+    font-size: 23px;
+    letter-spacing: 0.1rem;
+    width: 80%;
+    text-align: center;
+}
+
+.contact {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.form {
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+}
+
+label {
+    margin: 20px 0;
+}
+
+input, textarea {
+    background: #f6f6f6;
+    width: 300px;
+    padding: 8px;
+    font-family: "Ojuju", sans-serif;
+    font-weight: bold;
+    font-size: 17px;
+    border: 1px solid #e26600;
+    border-radius: 5px;
+    margin: 3px;
+}
+
+textarea {
+    height: 150px;
+    border-radius: 5px;
+}
+
+.btn-submit {
+    align-self: center;
+    border: 1px solid #e26600;
+    border-radius: 5px;
+    background: #0b3a3e;
+    color: #f6f6f6;
+    font-family: "Rowdies", sans-serif;
+    font-size: 23px;
+    width: 200px; 
+    letter-spacing: 0.1rem;
+    padding: 10px 35px;
+    cursor: pointer;
+    margin: 0 0 10px;
+}
+
+
+@media all and (max-width: 1120px) {
+    .bg-contact h1 {
+        font-size: 25px;
+    }
+    .bg-contact p {
+        font-size: 18px;
+    }
+}
+
+@media all and (max-width: 940px) {
+    .contactBox {
+        height: 100dvh;
+    }
+    .contactHead {
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        height: 80dvh;
+        width: 75vw;
+    }
+    .bg-contact h1 {
+        font-size: 20px;
+    }
+    .bg-contact p {
+        font-size: 15px;
+        width: 400px;
+    }
+    .form {
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        margin: 0;
+    }
+}
+
+@media all and (max-width: 560px) {
+    .bg-contact p {
+        font-size: 15px;
+    }
+    input, textarea {
+        width: 240px;
+    }
+    textarea {
+        height: 150px;
+        margin-top: 20px;
+    }
+}
+
+@media all and (max-width: 530px) {
+    .contactBox {
+        height: 100dvh;
+    }
+    .contactHead {
+        height: 80dvh;
+    }
+    .bg-contact p {
+        width: 200px;
+    }
+    textarea {
+        height: 50px;
+        margin-top: 10px;
+    }
+}
+
+@media all and (max-width: 390px) {
+    .contactHead {
+        height: 85dvh;
+    }
+}
