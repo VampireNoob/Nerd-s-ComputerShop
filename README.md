@@ -11,7 +11,7 @@
 
 You can view a live demo of the project here: https://nerd-s-computershop.netlify.app
 
-## 🙂 Features:
+## 🛠️ Features:
 
 - ✔️ Primarily we're working with Redux here to add and remove items from the shopping cart.
 - ✔️ In this project I used hooks like useEffect, useState, useForm, useSelector, useRef, useDispatch and useNavigate.
