@@ -1,70 +1,70 @@
-# Getting Started with Create React App
+<h1 align="center">Nerd's ComputerShop 💻</h1>  
+<p align="center">
+    A complex online computer store app created with <a href="https://reactjs.org/">React</a> and <a href="https://redux.js.org/">Redux</a>.
+</p>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+![computershop](https://github.com/VampireNoob/Nerd-s-ComputerShop/assets/128150500/f62400ad-5765-4b6f-92bd-1bb471f8c594)
 
-## Available Scripts
 
-In the project directory, you can run:
 
-### `npm start`
+## Here I made my final project with React.js, Redux, UI and a few plugins.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+You can view a live demo of the project here: https://nerd-s-computershop.netlify.app
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## 🙂 Features:
 
-### `npm test`
+- ✔️ Primarily we're working with Redux here to add and remove items from the shopping cart.
+- ✔️ In this project I used hooks like useEffect, useState, useForm, useSelector, useRef, useDispatch and useNavigate.
+- ✔️ We also used methods map, filter, push and toFixed.
+- ✔️ We can also vary the number of products.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Here is part of the code using Redux.
+````
+import { createSlice } from "@reduxjs/toolkit";
 
-### `npm run build`
+export const cartSlice = createSlice({
+    name: "cart",
+    initialState: {
+        cartItems: []
+    },
+    reducers: {
+        removeFromCart: (state, action) => {
+            state.cartItems = state.cartItems.filter(cartItem => cartItem.id !== action.payload.cartItemId)
+        },
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+        addToCart: (state, action) => {
+            const timeId = new Date().getTime()
+            state.cartItems.push(
+                {
+                id: timeId,
+                quantity: action.payload.quantity,
+                totalPrice: action.payload.price*action.payload.quantity,
+                itemId:  action.payload.id,
+                }
+            );
+            }
+        }
+    })
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+export const getTotalPrice = state => {
+    return state.cart.cartItems.reduce((total, cartItems) => {
+        return cartItems.totalPrice + total
+    }, 0)
+}
+export const getTotalArticles = state => {
+    return state.cart.cartItems.length 
+};
+export const getCartItems = state => state.cart.cartItems;
+export const { addToCart, removeFromCart } = cartSlice.actions;
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+export default cartSlice.reducer;
+````
 
-### `npm run eject`
+## Built With
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+In this section you will find the programming languages ​​/ frameworcs / libraries that I used in this project.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+* <img src="https://github.com/VampireNoob/Wedding-Wish-List/assets/128150500/d1885e0d-bc56-480b-b104-b181b8c82cbf" width="30">
+* <img src="https://github.com/VampireNoob/Wedding-Wish-List/assets/128150500/c43e4d15-62e4-4254-a673-c4021fd4cf25" width="30">
+* <img src="https://github.com/VampireNoob/Wedding-Wish-List/assets/128150500/e8f0b5ca-935a-45d1-b5c0-419f02ee83d4" width="30">
+* <img src="https://github.com/VampireNoob/Online-Food/assets/128150500/89651946-9ca7-49d0-833d-2733e9d295eb" width="30">
