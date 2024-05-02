@@ -4,9 +4,9 @@ import './contact.css'
 
 
 const ContactForm =()=> {
-  const [state, handleSubmit] = useForm("singupForm");
+  const [state, handleSubmit] = useForm("xqknozoj");
   if (state.succeeded) {
-      return <div className="thank-you">Danke für Ihren Support!</div>;
+      return <div className="thank-you"><h4>Danke für Ihren Support!</h4></div>;
   }
   return (
   <form className="form" onSubmit={handleSubmit}>
