@@ -88,6 +88,14 @@ textarea {
     margin: 0 0 10px;
 }
 
+.thank-you {
+    font-family: "Ojuju", sans-serif;
+    font-size: 23px;
+    letter-spacing: 0.1rem;
+    color: #e26600;
+    text-align: center;
+}
+
 
 @media all and (max-width: 1120px) {
     .bg-contact h1 {
