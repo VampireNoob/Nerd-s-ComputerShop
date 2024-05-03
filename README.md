@@ -18,7 +18,7 @@ You can view a live demo of the project here: https://nerd-s-computershop.netlif
 - ✔️ We also used methods map, filter, push and toFixed.
 - ✔️ We can also vary the number of products.
 
-## Here is part of the code using Redux.
+## Here is part of the code using React and Redux.
 ````
 import { createSlice } from "@reduxjs/toolkit";
 
@@ -58,6 +58,15 @@ export const getCartItems = state => state.cart.cartItems;
 export const { addToCart, removeFromCart } = cartSlice.actions;
 
 export default cartSlice.reducer;
+````
+
+## I had a problem after uploading to the Netlify portal. The page always showed the error code "404 Page not found" when I reloaded the page not on the homepage but on the shop page, for example.
+Here is a snippet that I added to make it work smoothly again.
+````
+[[redirects]]
+from = "/*"
+to = "/index.html"
+status = 200
 ````
 
 ## Built With
