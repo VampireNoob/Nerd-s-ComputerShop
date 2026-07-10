@@ -30,7 +30,7 @@ export const serviceData = [
         img: "guarantee",
         title: "GARANTIE",
         subtitle: "Auf alle unsere Produkte",
-        bg: "rgba(246,246,246,0.3",
+        bg: "rgba(246,246,246,0.3)",
       },
     ];
 
@@ -68,7 +68,7 @@ export const serviceData = [
 
       {
         id: "30",
-        img: "mouse5",
+        img: "Mouse5",
         name: "Gaming Maus",
         category: "MÄUSE",
         price: 49.99,
@@ -217,7 +217,7 @@ export const serviceData = [
         id: "11",
         img: "PC4",
         name: "Gaming PC",
-        desc: "We are looking at a model face on, wearing a sweet navy blue satin tank top with pink embroidered flowers across the top. Paired with jeans, this is the perfect combo of sexy and casual.", 
+        desc: "Dieser Gaming PC überzeugt mit kompaktem Design und starker Leistung für flüssiges Gaming in Full HD. Dank effizienter Kühlung bleibt das System auch unter Last angenehm leise.",
         category: "PC",
         detailOne: "ASUS GEFORCE RTX 3060, ASUS DUAL-RTX3060-O12G-V2, 12 GB GDDR6",
         detailTwo: "INTEL CORE I5-14500, 14 KERNE (6+8), 6X 2600 MHZ",
@@ -336,8 +336,8 @@ export const serviceData = [
       {
         id: "21",
         img: "PC7",
-        name: "Light Blue Womens Blouse",
-        desc: "Der kompakter Mini-PC ist für Office-Anwendungen und 4K-Home-Entertainment geeignet. Der kleine, leichte PC ist mit einer Passivkühlung sowie Solid State-Komponenten ausgestattet und arbeitet jederzeit absolut lautlos.",
+        name: "Mini PC Kompakt",
+        desc: "Der kompakte Mini-PC ist für Office-Anwendungen und 4K-Home-Entertainment geeignet. Der kleine, leichte PC ist mit einer Passivkühlung sowie Solid State-Komponenten ausgestattet und arbeitet jederzeit absolut lautlos.",
         category: "PC",
         detailOne: "Intel Quad-Core N5100, 4× 2800 MHz Intel Burst Frequenz",
         detailTwo: "Windows 11 Pro, 64Bit, inkl. Installation",

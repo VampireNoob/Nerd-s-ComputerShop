@@ -8,7 +8,7 @@ import imgSlide from './slide1.jpg'
 
 
 const Home = () => {
-  const [hideSlider, setHideSlider] = useState(true)
+  const [hideSlider, setHideSlider] = useState(window.innerWidth > 500)
   
   useEffect(() => {
     const handleResize = () => {

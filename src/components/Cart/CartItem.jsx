@@ -7,7 +7,6 @@ import { motion } from "framer-motion"
 
 const CartItem = ({cartItem}) => {
     const items = popularProducts.find(item => item.id === cartItem.itemId)
-    console.log(items)
     const dispatch = useDispatch();
 
     return (
@@ -20,7 +19,7 @@ const CartItem = ({cartItem}) => {
                     <p className="cartItem-title">{items.name}</p>
                     <div className="box2-cartItem">
                         <p className="cartItem-quantity-price">Menge: {cartItem.quantity}</p>
-                        <p className="cartItem-quantity-price cartItem-price">Summe: {items.price.toFixed(2)*cartItem.quantity} €</p>
+                        <p className="cartItem-quantity-price cartItem-price">Summe: {(items.price * cartItem.quantity).toFixed(2)} €</p>
                     </div>
                 </div>
             <div className="right" >

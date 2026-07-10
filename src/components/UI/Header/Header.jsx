@@ -1,4 +1,4 @@
-import React, { useRef, useState } from 'react';
+import React, { useRef, useState, useEffect } from 'react';
 import './header.css';
 import { motion } from "framer-motion"
 import { NavLink, Link } from 'react-router-dom';
@@ -35,13 +35,18 @@ const Header = () => {
     setCartContainer(!cartContainer)
   }
 
-  const setFixNavbar = () => {
-    if (window.scrollY >= 115 ) {
+useEffect(() => {
+  const handleScroll = () => {
+    if (window.scrollY >= 115) {
       setFixNav(true);
+    } else {
+      setFixNav(false);
     }
-    else setFixNav(false)
-  }
-  window.addEventListener('scroll', setFixNavbar)
+  };
+
+  window.addEventListener('scroll', handleScroll);
+  return () => window.removeEventListener('scroll', handleScroll);
+}, []);
   const totalItems = useSelector(getTotalArticles);
   const menuToggle = () => menuRef.current.classList.toggle('active-menu')
 

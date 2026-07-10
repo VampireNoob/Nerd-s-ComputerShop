@@ -77,6 +77,25 @@
   margin-left: 85px;
 }
 
+.priceSummary {
+  text-align: center;
+}
+
+.subTotal {
+  font-family: "Ojuju", sans-serif;
+  font-size: 16px;
+  color: #bababa;
+  margin: 5px 0;
+}
+
+.discountLine {
+  font-family: "Ojuju", sans-serif;
+  font-size: 16px;
+  color: #e28301;
+  font-weight: bold;
+  margin: 5px 0;
+}
+
 .totalPrice {
   font-family: "Ojuju", sans-serif;
   font-size: 28px;

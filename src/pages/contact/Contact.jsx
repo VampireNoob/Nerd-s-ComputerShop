@@ -1,6 +1,5 @@
 import React from 'react'
 import ContactForm from './ContactForm'
-import { FormspreeProvider } from '@formspree/react';
 
 
 const Contact = () => {
@@ -13,9 +12,7 @@ const Contact = () => {
       </div>
 
       <div className='contact'>
-    <FormspreeProvider>
-      <ContactForm />
-    </FormspreeProvider>
+        <ContactForm />
       </div>  
     </div>
   </div>

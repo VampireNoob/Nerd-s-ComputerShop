@@ -47,9 +47,9 @@ const Footer = () => {
                         <Link className="ft-link" to={`/about`}>
                             <p className="ft-linkItem">Über uns</p>
                         </Link>
-                        <Link className="ft-link" to={`/`}>
+                        <span className="ft-link">
                             <p className="ft-linkItem">Impressum</p>
-                        </Link>
+                        </span>
                         <Link className="ft-link" to={`/contact`}>
                             <p className="ft-linkItem">Kontakt / Feedback</p>
                         </Link>
@@ -60,18 +60,18 @@ const Footer = () => {
                 <div className="footer-center">
                         <h4 className="footer-title">HÄUFIGE FRAGEN</h4>
                     <div className="footer-links">
-                        <Link className="ft-link" to={`/`}>
+                        <span className="ft-link">
                             <p className="ft-linkItem">AGB</p>
-                        </Link> 
-                        <Link className="ft-link" to={`/`}>
+                        </span> 
+                        <span className="ft-link">
                             <p className="ft-linkItem">Datenschutz</p>
-                        </Link> 
-                        <Link className="ft-link" to={`/`}>
+                        </span> 
+                        <span className="ft-link">
                             <p className="ft-linkItem">Widerrufsrecht</p>
-                        </Link>
-                        <Link className="ft-link" to={`/`}>
+                        </span>
+                        <span className="ft-link">
                             <p className="ft-linkItem">Lieferzeiten</p>
-                        </Link>
+                        </span>
                     </div>
                 </div>
 
@@ -95,7 +95,7 @@ const Footer = () => {
                             <motion.span>
                                 <MdEmail className="symbol" />
                             </motion.span>
-                            <p className="footer-listItem"> Email: nerdscomp@gmail</p >
+                            <p className="footer-listItem"> Email: nerdscomp@gmail.com</p >
                         </div>
                         <div className="ft-contact">
                             <motion.span>
