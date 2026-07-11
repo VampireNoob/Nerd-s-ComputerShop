@@ -1,8 +1,11 @@
+import { useState } from 'react';
 import { useSelector } from "react-redux"
+import { useAuth0 } from '@auth0/auth0-react';
 import { getCartItems, getTotalPrice, getDiscountRate, getDiscountAmount, getFinalPrice } from "../../redux/cartSlice"
 import CartItem from "./CartItem";
 import './cart.css';
 import ContinueShopping from "../Buttons/ContinueShopping";
+import { createCheckoutSession } from '../../services/stripeCheckout';
 
 
 const Cart = () => {
@@ -11,6 +14,27 @@ const Cart = () => {
     const discountRate = useSelector(getDiscountRate)
     const discountAmount = useSelector(getDiscountAmount)
     const finalPrice = useSelector(getFinalPrice)
+    const { isAuthenticated, loginWithRedirect } = useAuth0();
+    const [isCheckingOut, setIsCheckingOut] = useState(false);
+    const [checkoutError, setCheckoutError] = useState(null);
+
+    const handleCheckout = async () => {
+        setCheckoutError(null);
+
+        if (!isAuthenticated) {
+            loginWithRedirect({ appState: { returnTo: '/' } });
+            return;
+        }
+
+        setIsCheckingOut(true);
+        try {
+            const { url } = await createCheckoutSession(cartItem);
+            window.location.href = url;
+        } catch (error) {
+            setCheckoutError(error.message);
+            setIsCheckingOut(false);
+        }
+    }
 
     return (
         <div className="container-cart">
@@ -27,6 +51,12 @@ const Cart = () => {
                         <p className="discountLine">Rabatt ({(discountRate * 100).toFixed(0)}%): -{discountAmount.toFixed(2)} €</p>
                     )}
                     <h3 className="totalPrice">Gesamt: {finalPrice.toFixed(2)} €</h3>
+
+                    {checkoutError && <p className="checkoutError">{checkoutError}</p>}
+
+                    <button className="checkout-btn" onClick={handleCheckout} disabled={isCheckingOut}>
+                        {isCheckingOut ? 'Wird geladen...' : 'ZUR KASSE'}
+                    </button>
                 </div>
             )}
 

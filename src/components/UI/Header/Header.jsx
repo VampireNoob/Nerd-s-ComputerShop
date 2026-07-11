@@ -3,7 +3,9 @@ import './header.css';
 import { motion } from "framer-motion"
 import { NavLink, Link } from 'react-router-dom';
 import { MdOutlineShoppingBag, MdMenu, MdClose } from "react-icons/md";
+import { FaUserCircle } from "react-icons/fa";
 import { useSelector } from 'react-redux';
+import { useAuth0 } from '@auth0/auth0-react';
 import { getTotalArticles } from '../../../redux/cartSlice';
 import Cart from '../../Cart/Cart'
 
@@ -31,6 +33,7 @@ const Header = () => {
   const [cartContainer, setCartContainer] = useState(false);
   const [fixNav, setFixNav] =useState(false)
   const menuRef = useRef(null);
+  const { loginWithRedirect, logout, isAuthenticated, user } = useAuth0();
   const openCart = () => {
     setCartContainer(!cartContainer)
   }
@@ -72,6 +75,16 @@ return (
       </div>
 
       <div className='nav-icons'>
+        {isAuthenticated ? (
+          <motion.div whileHover={{scale: 1.2}} className="auth-icon auth-icon-active" onClick={() => logout({ logoutParams: { returnTo: window.location.origin } })} title={`Eingeloggt als ${user?.email} – Klicken zum Ausloggen`}>
+            <FaUserCircle />
+          </motion.div>
+        ) : (
+          <motion.div whileHover={{scale: 1.2}} className="auth-icon" onClick={() => loginWithRedirect()} title="Einloggen">
+            <FaUserCircle />
+          </motion.div>
+        )}
+
         <motion.div whileHover={{scale: 1.2}} className="cart-container cart-icon" onClick={() => openCart()}>
           <MdOutlineShoppingBag />
         </motion.div> 

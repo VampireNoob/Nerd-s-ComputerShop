@@ -1,0 +1,6 @@
+node_modules
+.env
+
+# stripe-server
+stripe-server/node_modules
+stripe-server/.env

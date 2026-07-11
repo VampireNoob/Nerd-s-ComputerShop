@@ -51,12 +51,30 @@
     align-items: center;
 }
 
+/* zuständig für den login/logout icon */
+.auth-icon {
+    padding: 10px;
+    font-size: 30px;
+    color: #e28301;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    line-height: 0;
+}
+
+.auth-icon-active {
+    color: #4ade80;
+}
+
 /* zuständig für den warenkorb */
 .cart-icon {
     padding: 10px;
     font-size: 30px;
     color: #e28301;
     cursor: pointer;
+    display: flex;
+    align-items: center;
+    line-height: 0;
 }
 
 /* der burger bei smartphones */
@@ -84,7 +102,7 @@
     cursor: pointer;
     position: absolute;
     top: 17px;
-    right: 160px;
+    right: 125px;
     width: 15px;
     height: 15px;
     border-radius: 50%;
@@ -182,6 +200,9 @@
         font-size: 15px;
     }
     .cart-icon {
+        font-size: 25px;
+    }
+    .auth-icon {
         font-size: 25px;
     }
 }

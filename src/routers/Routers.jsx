@@ -4,6 +4,8 @@ import ProductDetails from '../components/ProductComponent/ProductDetails'
 import { Route, Routes } from 'react-router-dom'
 import About from '../pages/About/About'
 import Contact from '../pages/contact/Contact'
+import CheckoutSuccess from '../pages/checkout/CheckoutSuccess'
+import CheckoutCancel from '../pages/checkout/CheckoutCancel'
 
 
 const Routers = () => {
@@ -14,6 +16,8 @@ const Routers = () => {
         <Route path="about" element={<About />} />
         <Route path="contact" element={<Contact />} /> 
         <Route path="shop/:id" element={<ProductDetails />} />
+        <Route path="checkout-success" element={<CheckoutSuccess />} />
+        <Route path="checkout-cancel" element={<CheckoutCancel />} />
     </Routes>
     )
 }
