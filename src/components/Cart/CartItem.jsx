@@ -1,12 +1,12 @@
 import { useDispatch } from "react-redux"
-import { popularProducts} from "../../data/dataProducts"
+import { getProductById } from "../../data/productHelpers"
 import { removeFromCart } from '../../redux/cartSlice'
 import { FaRegTrashAlt } from "react-icons/fa";
 import { motion } from "framer-motion"
 
 
 const CartItem = ({cartItem}) => {
-    const items = popularProducts.find(item => item.id === cartItem.itemId)
+    const items = getProductById(cartItem.itemId)
     const dispatch = useDispatch();
 
     return (

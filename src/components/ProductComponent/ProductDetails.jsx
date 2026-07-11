@@ -3,7 +3,7 @@ import { useState } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { addToCart } from '../../redux/cartSlice';
-import { popularProducts } from '../../data/dataProducts';
+import { getProductById } from '../../data/productHelpers';
 import ChangeQuantity from '../Cart/ChangeQuantity'
 import './product.css';
 import { motion } from "framer-motion"
@@ -14,10 +14,11 @@ const ProductDetails = () => {
   const navigate = useNavigate()
   const [quantity, setQuantity] = useState(1);
   const dispatch = useDispatch();
+  const product = getProductById(id);
 
   return (
     <div>
-      {popularProducts.filter((item) => item.id === id ).map((elem, id) => {
+      {product && [product].map((elem, id) => {
         return (
           <div className="product-container" key={id}>
             <div className="left">

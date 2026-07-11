@@ -1,6 +1,6 @@
 import React from 'react'
 import { useState } from 'react'
-import { sliderData } from '../../../data/dataProducts'
+import { sliderData } from '../../../data/dataSlider'
 import './slider.css'
 import { PiArrowLeft, PiArrowRight } from "react-icons/pi";
 

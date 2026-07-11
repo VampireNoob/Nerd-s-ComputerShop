@@ -1,4 +1,4 @@
-import { teams } from "../../../data/dataProducts";
+import { teams } from "../../../data/dataTeam";
 import TeamItem from "./TeamItem";
 import './team.css';
 
