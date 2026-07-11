@@ -1,6 +1,4 @@
 .container-cart {
-  max-height: 500px;
-  overflow-y: auto;
   flex-wrap: nowrap;
 }
 
@@ -119,8 +117,9 @@
 }
 
 .checkout-btn {
-  width: 100%;
-  margin-top: 15px;
+  width: 85%;
+  display: block;
+  margin: 15px auto 0;
   padding: 14px;
   background: #e26600;
   color: #f6f6f6;
